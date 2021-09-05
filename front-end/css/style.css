@@ -270,26 +270,22 @@ body {
     }
 }
 
-.container-title {
-    background-image: url('../assets/KKKK.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .tituloCadastro {
     margin: auto;
     background-color: #0a9077b3;
     color: #fff;
     padding: 10px 10px 10px 0px;
     text-align: center;
-    border-radius:  15px 15px 0px 0px;
-    
     
 }
 
+.dadosPessoais {
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
 

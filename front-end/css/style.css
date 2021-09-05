@@ -52,7 +52,7 @@ body {
 }
 
 .container-title {
-    background-image: url('assets/KKKK.jpg');
+    background-image: url('../assets/KKKK.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

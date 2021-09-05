@@ -282,14 +282,14 @@ body {
 }
 
 .tituloCadastro {
-    color: #fff;
-    font-size: 25px;
+    margin: auto;
     background-color: #0a9077b3;
-    height: 100px;
-    padding: 0 60px 20px 60px;
-    border-radius: 4px;
+    color: #fff;
+    padding: 10px 10px 10px 0px;
     text-align: center;
-    line-height: 1ch;
+    border-radius:  15px 15px 0px 0px;
+    
+    
 }
 
 

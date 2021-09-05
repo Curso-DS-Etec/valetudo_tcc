@@ -270,13 +270,14 @@ body {
     }
 }
 
+fieldset {
+    border: 0;
+}
+
 .tituloCadastro {
     margin: auto;
-    background-color: #0a9077b3;
     color: #fff;
-    padding: 5px 5px 5px 0px;
     text-align: center;
-
     
 }
 

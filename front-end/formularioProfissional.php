@@ -15,7 +15,7 @@
         <p>Complete seus dados pessoais</p>
         <br>
     </div>
-    <form name="cadastroProfissional" method="POST" action="insertProfissional.php">
+    <form name="cadastroProfissional" method="POST" action="../back-end/insertProfissional.php">
             <fieldset>
                 <div class="dadosPessoais">
                     <label>Nome</label>
@@ -87,7 +87,7 @@
             <fieldset>
                 <div>
                     <label>Área de atuação</label>
-                        <select>
+                        <select name="areaAtuacao">
                             <option></option>
                             <option>Assistencia Técnica</option>
                             <option>Aulas Particulares</option>

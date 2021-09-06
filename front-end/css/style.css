@@ -294,3 +294,7 @@ fieldset {
     background-color: none;
 }
 
+.dadosPessoais input:hover {
+    border-bottom-color: aqua;
+}
+

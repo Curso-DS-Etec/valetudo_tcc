@@ -257,11 +257,6 @@ body {
 .campo {
     font-family: sans-serif;
     font-size: 25px;
-    outline: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid 1px gray;
 }
 
 .botao {
@@ -287,11 +282,14 @@ fieldset {
 }
 
 .dadosPessoais {
-    position: relative;
-    left: 200px;
-    line-height: 40px;
-    border-radius: 6px;
-    padding: 0 22px;
-    font-size: 16px;
+
+}
+
+.dadosPessoais input {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px gray;
 }
 

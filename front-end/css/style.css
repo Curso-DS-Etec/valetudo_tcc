@@ -281,6 +281,9 @@ fieldset {
 
 .containerForm {
     text-align: center;
+}
+
+form {
     color: #cacaca;
     max-width: 500px;
     margin: auto;

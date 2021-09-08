@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="tituloCadastro">
-        <h1>Cadastro de Profissionais</h1>
-        <p>Complete seus dados pessoais</p>
-        <br>
-    </div>
+    <section class="section">
+        <div class="containerForm"></div>
+            <div class="tituloCadastro">
+                <h1>Cadastro de Profissionais</h1>
+                <p>Complete seus dados pessoais</p>
+                <br>
+            </div>
     <form name="cadastroProfissional" method="POST" action="../back-end/insertProfissional.php">
             <fieldset>
                 <div class="dadosPessoais">
                     <label>Nome</label>
-                    <input type="text" name="nomeProfissional">
+                    <input type="text" name="nomeProfissional"placeholder="Digite o seu nome">
 
                     <label>Sobrenome</label>
                     <input type="text" name="sobrenomeProfissional">
@@ -129,5 +131,7 @@
         
        
     </form>
+    </div>
+    </section>
 </body>
 </html>

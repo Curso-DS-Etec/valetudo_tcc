@@ -281,8 +281,8 @@ fieldset {
     
 }
 
-.dadosPessoais {
-
+.containerForm {
+    text-align: center;
 }
 
 .dadosPessoais input {

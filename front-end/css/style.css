@@ -271,21 +271,3 @@ body {
     }
 }
 
-
-
-/*Formulario profissional*/
-
-fieldset {
-    border: 0;
-}
-
-.containerForm {
-    text-align: center;
-}
-
-form {
-    color: #cacaca;
-    max-width: 500px;
-    margin: auto;
-}
-

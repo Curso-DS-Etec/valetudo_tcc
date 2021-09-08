@@ -278,13 +278,16 @@ fieldset {
 /*Formulario profissional*/
 .tituloCadastro {
     margin: auto;
-    color: #fff;
+    color: #000;
     text-align: center;
     
 }
 
 .containerForm {
     text-align: center;
+    color: #cacaca;
+    max-width: 500px;
+    margin: auto;
 }
 
 .dadosPessoais input {

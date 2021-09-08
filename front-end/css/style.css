@@ -230,6 +230,7 @@ body {
     
 }
 
+/*Login*/
 .login {
     display: flex;
     flex-direction: column;
@@ -274,6 +275,7 @@ fieldset {
     border: 0;
 }
 
+/*Formulario profissional*/
 .tituloCadastro {
     margin: auto;
     color: #fff;

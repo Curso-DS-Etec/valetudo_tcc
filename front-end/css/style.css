@@ -293,6 +293,6 @@ fieldset {
 }
 
 .dadosPessoais input:hover {
-    border-bottom-color: rgb(22, 29, 133);
+    border-color: #e6e600e7;
 }
 

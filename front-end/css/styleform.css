@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 250, 250);
+}
+
+.nomeSite {
+    margin: 0 40px 0 0;
+    font-size: 24px;
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+.nomeSite span {
+    color: #e6e600;
+}
+
+.titulo {
+    padding: 60px;
+    margin-left: 280px;
+ 
+ }
+ 
+
+/* ESTILIZAÇÃO DO FORMULARIO */
+
+.containerForm {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* FIM DO ESTILO DOS CAMPOS E DO FORM */
+
+.espacamento {
+    position: relative;
+    font-size: 0px;
+}
+
+.botao {
+    margin: 30px 0px;
+    padding: 5px 5px 5px 5px;
+    background-color: #069;
+    height: 40px;
+    height: 45px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.botao:hover {
+    background-color: rgb(6, 70, 102) ;
+}
+
+
+/*Estilo login*/
+
+.menu-login {
+	padding-top: 100px;
+	padding-bottom: 250px;
+	background: rgb(236, 252, 252);
+}
+
+.menu-login .login-area {
+	max-width: 450px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.menu-login .login-area h3 {
+	margin-top: 0;
+	padding-top: 30px;
+	font-size: 22px;
+    color: rgba(0, 0, 0, 0.158);
+  
+}
+
+.menu-login .login-area p {
+	margin-top: 0;
+	padding-top: 8px;
+	font-size: 18px;
+  
+}
+
+.menu-login .login-area form  {
+	max-width: 300px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 18px;
+}
+
+.menu-login .login-area form .input-login {
+	box-shadow: none !important;
+	border: 1px solid #d3d3d3;
+	border-radius: 4px;
+    margin-bottom: 13px;
+    
+}
+.menu-login .login-area form .botao-login {
+	display: block;
+	width: 100%;
+	margin-top: 25px;
+  
+   
+}
+
+.rodape {
+    text-align: center;
+}

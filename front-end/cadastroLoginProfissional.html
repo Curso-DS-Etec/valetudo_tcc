@@ -7,30 +7,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Login Profissional</title>
-    <link rel="stylesheet" type="text/css" href="cadastroLogin.css">
+    <link rel="stylesheet" type="text/css" href="css/styleform.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body> 
+<body>
     
-    <div class="login">
-        <h1 id="titulo"><span>Vale</span> Tudo</h1>
-        <p id="subtitulo">Seja um de nossos profissionais!</p>
+    <!--Barra de Menu-->
+    <div class="container-top">
+        <div class="limitate-content container">
+            <a href="#" class="title"> <span>Vale</span> Tudo</a>
 
-        <div class="campo">
-            <label><strong>E-mail</strong></label>
-            <input type="email" name="emailProfissional">
+            <div>
+                <a class="link" href="#sobre">Sobre</a>
+                <a class="link" href="#como-funciona"><span>Como funciona</span></a>
+                <a class="link" href="#entrar">Entrar</a>
+                <a class="link" href="cadastroLoginProfissional.html">Seja um profissional</a>
+            </div>
         </div>
-
-        <div class="campo">
-            <label><strong>Senha</strong></label>
-            <input type="password" name="senhaProfissional">
-        </div>
-
-        <div class="campo">
-            <label><strong>Confirmar senha</strong></label>
-            <input type="password" name="confirmacaoSenhaProfissional">
-        </div>
-
-        <input type="submit" value="Cadastrar" class="botao">
     </div>
+
+    <!--LOGIN-->
+    <div class="menu-login">
+        <div class="principal-login">
+
+            <div class="login-area">
+                <!--Area do login-->
+                <h1 id="titulo-login"><span>Vale</span> Tudo</h1>
+                <p id="subtitulo-login">Seja um de nossos profissionais!</p>
+                <form id="form-login">
+                    <div class="campo-login">
+                        <label><strong>E-mail</strong></label>
+                        <input type="email" name="emailProfissional" class="input-login">
+                    </div>
+
+                    <div class="campo-login">
+                        <label><strong>Senha</strong></label>
+                        <input type="password" name="senhaProfissional" class="input-login">
+                    </div>
+
+                    <button type="submit" class="botao-login">Entrar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="rodape">
+            <p class="copy-right">Copyright &copy; 2021 Vale Tudo | Todos os direitos reservados. </p>
+        </div>
+    </footer>
 </body>
 </html>

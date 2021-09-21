@@ -61,56 +61,73 @@ body {
 }
 
 
-/*Estilo login*/
 
-.menu-login {
-	padding-top: 100px;
-	padding-bottom: 250px;
-	background: rgb(236, 252, 252);
-}
+/* comeco do estilo login */
+.titulo_login{
+    padding-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
 
-.menu-login .login-area {
-	max-width: 450px;
-	margin: 0 auto;
-	text-align: center;
 }
 
-.menu-login .login-area h3 {
-	margin-top: 0;
-	padding-top: 30px;
-	font-size: 22px;
-    color: rgba(0, 0, 0, 0.158);
-  
+.titulo_login h1 p{
+}
+.box{
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.box h1{
+    color: #3498db;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
-.menu-login .login-area p {
-	margin-top: 0;
-	padding-top: 8px;
-	font-size: 18px;
-  
+.box input[type = "text"],.box input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 300px;
+    outline: none;
+    color: rgb(7, 5, 5);
+    border-radius: 24px;
+    transition: 0.25s;
 }
 
-.menu-login .login-area form  {
-	max-width: 300px;
-	margin: 0 auto;
-	margin-top: 20px;
-	margin-bottom: 18px;
-}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 380px;
+    border-color: #2ecc71;
 
-.menu-login .login-area form .input-login {
-	box-shadow: none !important;
-	border: 1px solid #d3d3d3;
-	border-radius: 4px;
-    margin-bottom: 13px;
-    
+
 }
-.menu-login .login-area form .botao-login {
-	display: block;
-	width: 100%;
-	margin-top: 25px;
-  
-   
+.box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display:flex;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 50px;
+    outline: none;
+    color: rgb(22, 19, 19);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 150px;
 }
+.box input[type = "submit"]:hover{
+    background: #2ecc71;
+}
+/* termino do estilo login */
+
+
 
 .rodape {
     text-align: center;

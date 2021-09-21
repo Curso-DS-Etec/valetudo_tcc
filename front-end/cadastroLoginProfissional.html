@@ -1,4 +1,4 @@
-<?php include('conexao.php'); ?>
+<!-- <?php include('conexao.php'); ?> -->
 
 
 <!DOCTYPE html>
@@ -6,9 +6,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Login Profissional</title>
+    <script type="text/javascript" src="js/js_login/jquery.min.js"></script>
+    <script type="text/javascript" src="js/js_login/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styleform.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Cadastro de Login Profissional</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            var url = "http://localhost/valetec/login/logar.php";
+            
+            $("#loginButton").click(function(){
+                var usuario = $.trim($("#usuario").val());
+                var senha = $.trim($("#senha").val());
+
+                $("#status").text("Buscando usuário...");
+                var loginString ="usuario ="+ usuario +"&senha ="+ senha +"&login =";
+                $.ajax({
+                    type: "POST",crossDomain: true, cache: false,
+                    url: url,
+                    data: loginString,
+                    success: function(data){
+                        if($.trim(data) == "success") {
+                            $("#status").text("Logado com Sucesso..!");
+                            localStorage.loginstatus = "true";
+                            // mudar a página que será a principal
+                            window.location.href = "quartos.html";
+                        }
+                        else if(data == "error")
+                        {
+                            $("#status").text("Usuário Incorreto..!");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     
@@ -29,32 +64,29 @@
     <div class="menu-login">
         <div class="principal-login">
 
-            <div class="login-area">
+            <div class="titulo_login">
                 <!--Area do login-->
                 <h1 id="titulo-login"><span>Vale</span> Tudo</h1>
                 <p id="subtitulo-login">Seja um de nossos profissionais!</p>
-                <form id="form-login">
-                    <div class="campo-login">
-                        <label><strong>E-mail</strong></label>
-                        <input type="email" name="emailProfissional" class="input-login">
+                
+                <div class="main_cta">
+                    <div class="box">
+                    <!-- <form class="box" action="cadastroLoginProfissional.html" method="POST"> -->
+                        <h1>Login</h1>
+                        <input id="usuario" type="text" name="" placeholder="Username">
+                        <input id="senha" type="password" name="" placeholder="Password">
+                        <input type="submit" id="loginButton">
+                      <!-- </form> -->
                     </div>
-
-                    <div class="campo-login">
-                        <label><strong>Senha</strong></label>
-                        <input type="password" name="senhaProfissional" class="input-login">
-                    </div>
-
-                    <button type="submit" class="botao-login">Entrar</button>
-                </form>
+                </div>
             </div>
-
         </div>
     </div>
 
-    <footer>
+    <!-- <footer>
         <div class="rodape">
             <p class="copy-right">Copyright &copy; 2021 Vale Tudo | Todos os direitos reservados. </p>
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>

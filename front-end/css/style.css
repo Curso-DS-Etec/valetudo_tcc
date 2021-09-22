@@ -230,4 +230,87 @@ body {
     
 }
 
+/* ESTILIZAÇÃO DO FORMULARIO PROFISSIONAL */
 
+.containerForm {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* FIM DO ESTILO DOS CAMPOS E DO FORM */
+
+/* ESTILO TELA DE LOGIN */
+.titulo_login{
+    padding-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.titulo_login h1 p{
+}
+.box{
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.box h1{
+    color: #3498db;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type = "text"],.box input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 300px;
+    outline: none;
+    color: rgb(7, 5, 5);
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 380px;
+    border-color: #2ecc71;
+
+
+}
+.box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display:flex;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 50px;
+    outline: none;
+    color: rgb(22, 19, 19);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 150px;
+}
+.box input[type = "submit"]:hover{
+    background: #2ecc71;
+}
+/* termino do estilo login */
+
+
+
+.rodape {
+    text-align: center;
+}

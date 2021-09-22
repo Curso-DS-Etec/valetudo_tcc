@@ -68,8 +68,7 @@
                                  echo 'error';
                             }
                         */
-
-
+                        
                         echo "$username <br>";
                         echo "$password <br>";
                         echo "$email <br>";

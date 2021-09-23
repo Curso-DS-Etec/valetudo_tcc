@@ -7,6 +7,7 @@ body {
     background-color: #f0f0ff;
 }
 
+/*ESTILO INDEX*/
 .container {
     max-width: 1024px;
 }
@@ -230,19 +231,116 @@ body {
     
 }
 
-/* ESTILIZAÇÃO DO FORMULARIO PROFISSIONAL */
 
-.containerForm {
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
-    overflow: hidden;
-    max-width: 600px;
+/*ESTILO FORMULARIO PROFISSIONAL*/
+
+.box-form-profissional {
+    
     margin: 0 auto;
-    padding: 40px;
+
+    background-color: rgba(243, 243, 245, 0.705);
+    padding: 15px;
+    border-radius: 15px;
+    width: 40%;
 }
 
-/* FIM DO ESTILO DOS CAMPOS E DO FORM */
+fieldset {
+    border: 2px solid rgb(227, 235, 121);
+}
+
+h1 {
+    border: 1px solid rgb(227, 235, 121);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(227, 235, 121);
+    border-radius: 8px;
+    color: rgb(58, 58, 3);
+}
+
+h3 {
+    border: 1px solid rgb(227, 235, 121);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(227, 235, 121);
+    border-radius: 8px;
+    color: rgb(58, 58, 3);
+}
+
+p {
+    border: 1px solid rgb(227, 235, 121);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(227, 235, 121);
+    border-radius: 8px;
+    color: rgb(58, 58, 3);    
+}
+
+.dadosProfissional {
+    position: relative;
+}
+
+.input-form-profissonal {
+    background-color: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none; /*retira linha externa ao escrever*/
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 1.5px; /*espaço entre os caracter*/
+}
+
+
+
+.label-form-profissional {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none; /*qualquer lugar que eu clicar dentro do label vai realizar a animação*/
+    transition: .5s;
+}
+
+#data-nasc-profissional {
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#submit {
+    background-image: linear-gradient(to right, rgb(182, 207, 39), rgb(197, 219, 71));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#submit:hover {
+    background-image: linear-gradient(to right, rgb(160, 184, 27), rgb(182, 209, 30));
+}
+
+#areaAtuacao {
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background-color: rgb(234, 243, 182);
+    color: rgb(58, 58, 3);  
+}
+/*Quando selecionado o input, deve ocorrer a ação no label*/
+.input-form-profissonal:focus ~ .label-form-profissional,
+.input-form-profissonal:valid ~ .label-form-profissional{
+    top: -20px; /*faz o label subir*/
+    font-size: 12px; /*no momento que o label sobe, diminui*/
+    color: rgb(58, 58, 3);
+}
+
+/* FIM DO ESTILO DO FORMULARIO PROFISSIONAL*/
+
 
 /* ESTILO TELA DE LOGIN */
 .titulo_login{
@@ -307,7 +405,8 @@ body {
 .box input[type = "submit"]:hover{
     background: #2ecc71;
 }
-/* termino do estilo login */
+
+/* FIM ESTILO LOGIN */
 
 
 

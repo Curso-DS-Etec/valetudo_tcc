@@ -2,7 +2,7 @@
 include('conexao.php');
 
 if(empty($_POST['usuario']) || empty($_POST['senha'])){
-    header('location: index.php');
+    header('location: ../front-end/index.php');
     exit();
 }
 
@@ -17,11 +17,11 @@ $row = mysqli_num_rows($result);
 
 if($row == 1){
     $_SESSION['usuario'] = $usuario;
-    header('Location: quartos.php');
+    header('Location: ../front-end/quartos.php');
     exit();
 
 } else{
-    header('Location: cadastroLoginProfissional.php');
+    header('Location: ../front-end/cadastroLoginProfissional.php');
     exit();
 }
 ?>

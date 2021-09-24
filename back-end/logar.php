@@ -1,15 +1,27 @@
-<?php
-include "conexao.php";
-    $usuario = $_POST['usuario'];
-    $senha = $_POST['senha'];
-    
-   if(isset($_POST['login']))
-    {
-        $login = mysqli_num_rows(mysqli_query($con, "SELECT * FROM dadoslogin WHERE usuario='$usuario' AND senha='$senha'"));
-        if($login != 0)
-            echo "success";
-        else
-            echo "error";
-    }
-    mysqli_close($con);
+<?php 
+include('conexao.php');
+
+if(empty($_POST['usuario']) || empty($_POST['senha'])){
+    header('location: index.php');
+    exit();
+}
+
+$usuario = $_POST['usuario'];
+$senha = $_POST['senha'];
+
+$query = "SELECT * FROM dadoslogin WHERE usuario = '$usuario' AND senha = '$senha'";
+
+$result = mysqli_query($conexao, $query);
+
+$row = mysqli_num_rows($result);
+
+if($row == 1){
+    $_SESSION['usuario'] = $usuario;
+    header('Location: quartos.php');
+    exit();
+
+} else{
+    header('Location: cadastroLoginProfissional.php');
+    exit();
+}
 ?>

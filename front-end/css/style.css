@@ -366,7 +366,7 @@ p {
     font-weight: 500;
 }
 
-.box input[type = "text"],.box input[type = "password"]{
+.box input[type = "text"],.box input[type = "password"],.box input[type = "email"]{
     border: 0;
     background: none;
     display: block;
@@ -381,7 +381,7 @@ p {
     transition: 0.25s;
 }
 
-.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+.box input[type = "text"]:focus,.box input[type = "password"],.box input[type = "email"]:focus{
     width: 380px;
     border-color: #2ecc71;
 

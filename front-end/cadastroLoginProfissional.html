@@ -1,16 +1,16 @@
 <!-- <?php include('conexao.php'); ?> -->
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Cadastro de Login Profissional</title>
 </head>
+
 <body>
-    
+
     <!--Barra de Menu-->
     <div class="container-top">
         <div class="limitate-content container">
@@ -32,18 +32,24 @@
                 <!--Area do login-->
                 <h1 id="titulo-login"><span>Vale</span> Tudo</h1>
                 <p id="subtitulo-login">Seja um de nossos profissionais!</p>
-                
+
                 <div class="main_cta">
                     <div class="box">
-                    <form class="box" action="cadastroLoginProfissional.html" method="POST">
-                        <h1>Login</h1>
-                        <input id="usuario" type="text" name="" placeholder="Username">
-                        <input id="senha" type="password" name="" placeholder="Password">
-                        <input type="submit" id="loginButton">
+                        <form class="box" action="cadastroLoginProfissional.html" method="POST">
+                            <h1>Login</h1>
+                            <input id="usuario" type="text" name="" placeholder="Username">
+                            <input id="senha" type="password" name="" placeholder="Password">
 
-                        <p id="status"> </p>
-                        
-                      </form>
+                            <div class="#">
+                                <input type="checkbox">
+                                <label for="">Lembrar-me</label>
+                                <a href="recuperar">Recuperar Senha</a>
+                                <input type="submit" id="loginButton">
+                            </div>
+
+                            <p id="status"> </p>
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -56,4 +62,5 @@
         </div>
     </footer> -->
 </body>
+
 </html>

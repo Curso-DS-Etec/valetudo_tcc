@@ -457,7 +457,7 @@ p {
     margin-bottom: 10px;
 }
 
-@media (max-width: 450px){
+@media (max-width: 727px){
     .card{
         flex-basis:100%;
         margin: 15px 0;

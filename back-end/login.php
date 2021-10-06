@@ -1,27 +1,22 @@
-<?php 
-include('conexao.php');
+<?php
+    require("conexao2.php");
 
-if(empty($_POST['usuarioProfissional']) || empty($_POST['senhaProfissional'])){
-    header('location: ../front-end/index.php');
-    exit();
-}
+    if(isset($_POST["usuarioProfissional"]) && isset($_POST["senhaProfissional"]) && $con != null){
 
-$usuario = $_POST['usuarioProfissional'];
-$senha = $_POST['senhaProfissional'];
+        $query = $con->prepare("SELECT * FROM dadosLogin WHERE username = ? AND senha = ?");
+        $query->execute(array($_POST["usuarioProfissional"], $_POST["senhaProfissional"]));
 
-$query = "SELECT * FROM dadoslogin WHERE username = '$usuario' AND senha = '$senha'";
+        if($query->rowCount()){
+            $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
 
-$result = mysqli_query($conexao, $query);
-
-$row = mysqli_num_rows($result);
-
-if($row == 1){
-    $_SESSION['usuarioProfissional'] = $usuario;
-    header('Location: ../front-end/quartos.php');
-    exit();
-
-} else{
-    header('Location: ../front-end/cadastroLoginProfissional.php');
-    exit();
-}
-?>
+            session_start();
+            $_SESSION["username"] = array($user["nome"], $user["adm"]);
+                    
+                    echo json_encode(array("erro" => 0));
+                }else{
+                    echo json_encode(array("erro" => 1, "mensagem" => "Email e/ou senha incorretos."));
+                }
+            }else{
+                echo json_encode(array("erro" => 1, "mensagem" => "Ocorreu um erro interno no servidor."));
+            }
+        ?>

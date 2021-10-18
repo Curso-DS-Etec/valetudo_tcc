@@ -1,12 +1,14 @@
-<!-- <?php include('conexao.php'); ?> -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Cadastro de Login Profissional</title>
+   
+    <title>Cadastro Login Profissional</title> 
+    <link rel="stylesheet" href="../front-end/css/style.css">
+    <script type="text/javascript" src="../front-end/script/jquery.js"></script>
+    <script type="text/javascript" src="../front-end/script/acesso.js"></script>
 </head>
 
 <body>
@@ -35,19 +37,16 @@
 
                 <div class="main_cta">
                     <div class="box">
-                        <form class="box" action="../back-end/logar.php" method="POST">
+                        
+                        <div style= "color: red;" id="mensagem"></div>
+
+                        <form class="box" id="formularioLogin">
                             <h1>Login</h1>
-                            <input type="text" name="usuario" placeholder="Username">
-                            <input type="password" name="senha" placeholder="Password">
-
-                            <div class="#">
-                                <input type="checkbox">
-                                <label for="">Lembrar-me</label>
-                                <a href="recuperarSenha.html">Recuperar Senha</a>
-                                <input type="submit" id="loginButton">
+                            <input type="text" id="usuarioProfissional" name="usuarioProfissional" placeholder="Username">
+                            <input type="password" id="senhaProfissional" name="senhaProfissional" placeholder="Password">
+                           
+                            <button id="btnEntrar">Entrar</button>
                             </div>
-
-                            <p id="status"> </p>
 
                         </form>
                     </div>

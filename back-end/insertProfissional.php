@@ -6,6 +6,8 @@
         $username = $_POST['usuarioProfissional'];
         $password = $_POST['senhaProfissional'];
         $email = $_POST['emailProfissional'];
+        $nome = $_POST['nomeProfissional'];
+        $adm = $_POST['admProfissional'];
 
         // DADOS PARA TABELA dadosProfissional
         $nome = $_POST['nomeProfissional'];
@@ -41,9 +43,9 @@
 
             // INSERT TABELA dadosLogin
             $insertUsuario = mysqli_query($conexao,"INSERT INTO dadosLogin
-                            (username,senha,email)
+                            (username,senha,email,nome,adm)
                             VALUES
-                            ('$username','$password','$email')");
+                            ('$username','$password','$email','$nome','$adm')");
 
             // QUERYS PARA COLETAR O ID DA TABELA dadosLogin E enderecoCadastro E INSERIR NA TABELA dadosProfissional no campo FK
             $queryEndereco = mysqli_query($conexao,"SELECT * FROM enderecoCadastro");

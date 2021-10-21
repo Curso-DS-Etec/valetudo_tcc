@@ -6,8 +6,10 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>entrar...</title>
+    <title>Login</title>
 
+    <script type="text/javascript" src="../front-end/script/jquery.js"></script>
+    <script type="text/javascript" src="../front-end/script/acesso.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/signin.css">
 
@@ -38,16 +40,16 @@
 
     
 <main class="form-signin">
-  <form>
+  <form  id="formularioLogin">
     <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Entrar no Vale Tudo</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" class="form-control" id="usuarioProfissional" name="usuarioProfissional" placeholder="Username">
       <label for="floatingInput">e-mail</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="senhaProfissional" name="senhaProfissional" placeholder="Password">
       <label for="floatingPassword">senha</label>
     </div>
 
@@ -56,10 +58,11 @@
         <input type="checkbox" value="remember-me"> lembrar senha
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" id="btnEntrar">Entrar</button>
     <p class="mt-5 mb-3 text-muted">&copy;2021 Vale Tudo</p>
   </form>
 </main>
+
 
 
     

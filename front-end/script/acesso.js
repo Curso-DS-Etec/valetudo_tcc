@@ -23,7 +23,7 @@ $(function(){
                     if(retorno["erro"]){
                         $("div#mensagem").html(retorno["mensagem"]);
                     }else{
-                        window.location = "dashboard.php";
+                        window.location = "../painelProfissional/index.html";
                     }
                 },
 

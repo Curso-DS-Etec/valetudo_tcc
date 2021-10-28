@@ -40,10 +40,12 @@
 
 	<div class="container">
 		<div class="row py-4">
-			<div class="col">
+			<div class="col-5">
 				<h2>FALE CONOSCO</h2>
+				<img src="assets/faleconosco.png" alt="Fale Conosco" >
 			</div>
 		</div>
+
 		<form name="frmContact" id="frmContact" method="post" action=""
 			enctype="multipart/form-data" novalidate>
 			<div class="row">
@@ -75,7 +77,7 @@
 			</div>
 			<div class="row">
 				<div class="form-group col-md-8">
-					<label>Subject</label> <span id="subject-info"
+					<label>Assunto</label> <span id="subject-info"
 						class="invalid-feedback"></span>
 					<div class="input-group">
 
@@ -100,25 +102,26 @@
 					</div>
 				</div>
 			</div>
+			<hr class="my-4">
 			<div class="row">
 				<div class="col">
 					<input type="submit" name="send" class="btn btn-primary"
 						value="Enviar mensagem" />
 				</div>
 			</div>
-<?php
-if (! empty($displayMessage)) {
-    ?>
-            <div class="row">
-				<div class="col-md-8">
-					<div id="statusMessage" class="alert alert-success mt-3"
-						role="alert"><?php echo $displayMessage; ?>
+	<?php
+	if (! empty($displayMessage)) {
+		?>
+				<div class="row">
+					<div class="col-md-8">
+						<div id="statusMessage" class="alert alert-success mt-3"
+							role="alert"><?php echo $displayMessage; ?>
+						</div>
 					</div>
 				</div>
-			</div>
-<?php
-}
-?>
+	<?php
+	}
+	?>
 		</form>
 	</div>
 	<script type="text/javascript" src="./js/validation.js"></script>

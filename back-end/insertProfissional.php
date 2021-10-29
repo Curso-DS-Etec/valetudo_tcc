@@ -1,6 +1,7 @@
 <?php 
 
-    include('../back-end/conexao.php');
+   // include('../back-end/conexao.php');
+    include('../back-end/conexao2.php')
     
         // DADOS PARA TABELA dadosLogin
         $username = $_POST['usuarioProfissional'];

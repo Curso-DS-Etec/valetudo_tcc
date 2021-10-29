@@ -52,9 +52,7 @@
                             (username,senha,email)
                             VALUES
                             ('$username','$password','$email','$exibe[0]')");
-
-                        
-           
+         
                             // RETORNA SUCCESS SE TODOS OS DADOS FORAM INSERIDOS NO BANCO OU ERROR SE NÃO FOREM
                             if($insertEnderecoC) {					 		
                                 echo 'success';

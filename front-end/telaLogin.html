@@ -40,14 +40,12 @@
 
     
 <main class="form-signin">
-  <form  id="formularioLogin">
+  <form  id="formularioLogin" action="../back-end/login.php" method="POST">
     <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Entrar no Vale Tudo</h1>
 
-    <div style= "color: red;" id="mensagem"></div>
-
     <div class="form-floating">
-      <input type="email" class="form-control" id="usuarioProfissional" name="usuarioProfissional" placeholder="Username">
+      <input type="text" class="form-control" id="usuarioProfissional" name="usuarioProfissional" placeholder="Username">
       <label for="floatingInput">e-mail</label>
     </div>
     <div class="form-floating">
@@ -60,7 +58,7 @@
         <input type="checkbox" value="remember-me"> lembrar senha
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit" id="btnEntrar">Entrar</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
     <p class="mt-5 mb-3 text-muted">&copy;2021 Vale Tudo</p>
   </form>
 </main>

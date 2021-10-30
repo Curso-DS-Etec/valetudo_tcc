@@ -1,14 +1,14 @@
 <?php 
 
-   // include('../back-end/conexao.php');
-    include('../back-end/conexao2.php')
+        include('../back-end/conexao.php');
+
     
         // DADOS PARA TABELA dadosLogin
         $username = $_POST['usuarioProfissional'];
         $password = $_POST['senhaProfissional'];
         $email = $_POST['emailProfissional'];
         $nome = $_POST['nomeProfissional'];
-        $adm = $_POST['admProfissional'];
+        // $adm = $_POST['admProfissional'];
 
         // DADOS PARA TABELA dadosProfissional
         $nome = $_POST['nomeProfissional'];

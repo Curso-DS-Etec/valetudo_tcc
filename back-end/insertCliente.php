@@ -17,7 +17,6 @@
         $dataExpedicaoRG = $_POST['expedicaoRgCliente'];
         $celular = $_POST['celularCliente'];
         $telefone = $_POST['telefoneCliente'];
-        $sobre = $_POST['sobre'];
 
         // DADOS PARA TABELA enderecoCadastro
         $logradouro = $_POST['enderecoCliente'];
@@ -32,33 +31,26 @@
             // INSERT TABEL dadosCliente
             $insertCliente = mysqli_query($conexao,"INSERT INTO dadosCliente
                             (nome,sobrenome,cpf,rg,ufEmissor,dataExpedicao,
-                            dataNascimento,celular,telefone,sobre)
+                            dataNascimento,celular,telefone)
                             VALUES 
-                            ('$nome','$sobrenome','$cpf,'$rg','$ufEmissoraRG','$dataExpedicaoRG',
-                            '$dataNasc','$celular','$telefone','$sobre')");
+                            ('$nome','$sobrenome','$cpf','$rg','$ufEmissoraRG','$dataExpedicaoRG',
+                            '$dataNasc','$celular','$telefone')");
 
             // QUERYS PARA COLETAR O ID DA TABELA dadosLogin E enderecoCadastro E INSERIR NA TABELA dadosProfissional no campo FK
-            $query = mysqli_query($conexao,"SELECT * FROM dadosCliente");
-                while($exibe = mysqli_fetch_array($query)) {
+            $queryCliente = mysqli_query($conexao, "SELECT max(idCliente) FROM dadosCliente");
+            while ($exibeIdCliente = mysqli_fetch_array($queryCliente)) {
 
             // INSERT TABELA enderecoCadastro
-            $insertEnderecoC = mysqli_query($conexao,"INSERT INTO enderecoCadastro
+            $insertEnderecoCliente = mysqli_query($conexao,"INSERT INTO enderecoCadastro
                             (logradouro,numero,complemento,bairro,cidade,cep,estado,idCliente)
                             VALUES
-                            ('$logradouro','$numero','$complemento','$bairro','$cidade','$cep','$estado','$exibe[0]')");
+                            ('$logradouro','$numero','$complemento','$bairro','$cidade','$cep','$estado','$exibeIdCliente[0]')");
 
             // INSERT TABELA dadosLogin
-            $insertUsuarioC = mysqli_query($conexao,"INSERT INTO dadosLogin
+            $insertUsuarioCliente = mysqli_query($conexao,"INSERT INTO dadosLogin
                             (username,senha,email)
                             VALUES
-                            ('$username','$password','$email','$exibe[0]')");
-         
-                            // RETORNA SUCCESS SE TODOS OS DADOS FORAM INSERIDOS NO BANCO OU ERROR SE NÃO FOREM
-                            if($insertEnderecoC) {					 		
-                                echo 'success';
-                            } else {
-                                 echo 'error';
-                            }
+                            ('$username','$password','$email','$exibeIdCliente[0]')");
                     
                         }
 

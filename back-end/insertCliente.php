@@ -48,7 +48,7 @@
 
             // INSERT TABELA dadosLogin
             $insertUsuarioCliente = mysqli_query($conexao,"INSERT INTO dadosLogin
-                            (username,senha,email)
+                            (username,senha,email,idCliente)
                             VALUES
                             ('$username','$password','$email','$exibeIdCliente[0]')");
                     
@@ -68,7 +68,6 @@
                         echo "$dataExpedicaoRG <br>"; 
                         echo "$celular <br>";
                         echo "$telefone <br>";
-                        echo "$sobre <br>";
                             
                         // DADOS PARA TABELA enderecoCadastro
                         echo "$logradouro <br>";

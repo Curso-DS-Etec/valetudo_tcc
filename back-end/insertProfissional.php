@@ -31,19 +31,17 @@ $cidade = $_POST['cidadeProfissional'];
 $estado = $_POST['estadoProfissional'];
 $cep = $_POST['cepProfissional'];
 
-// QUERYS PARA COLETAR O ID DA TABELA dadosLogin E enderecoCadastro E INSERIR NA TABELA dadosProfissional no campo FK
-/* $queryEndereco = mysqli_query($conexao,"SELECT * FROM enderecoCadastro");
-            $queryUsuario = mysqli_query($conexao,"SELECT * FROM dadosLogin");
-                while($exibeUsuario = mysqli_fetch_array($queryUsuario)) {
-                    while($exibeEndereco = mysqli_fetch_array($queryEndereco)) { */
+$certificado = $_FILES['certificadoProfissional'];
+    for ($i = 0; $i < count($certificado['name']); $i++) {
+        move_uploaded_file($certificado['tmp_name'][$i], "../front-end/arquivos/".$certificado['name'][$i]); }
 
 // INSERT TABELA dadosProfissional
 $insertProfissional = mysqli_query($conexao, "INSERT INTO dadosProfissional
                                 (nome,sobrenome,cpf,rg,ufEmissor,dataExpedicao,cnpj,
-                                dataNascimento,celular,telefone,areaAtuacao,tempoAtuacao,possuiCertificado)
+                                dataNascimento,celular,telefone,areaAtuacao,tempoAtuacao,possuiCertificado,certificado)
                                 VALUES 
                                 ('$nome','$sobrenome','$cpf','$rg','$ufEmissoraRG','$dataExpedicaoRG','$cnpj',
-                                '$dataNasc','$celular','$telefone','$areaAtuacao','$tempoAtuacao','$possuiCertificado')");
+                                '$dataNasc','$celular','$telefone','$areaAtuacao','$tempoAtuacao','$possuiCertificado','".$certificado['name'][$i]."')");
 
 $queryProfissional = mysqli_query($conexao, "SELECT max(idProfissional) FROM dadosProfissional");
     while ($exibeIdProfissional = mysqli_fetch_array($queryProfissional)) {
@@ -59,41 +57,7 @@ $queryProfissional = mysqli_query($conexao, "SELECT max(idProfissional) FROM dad
             VALUES
             ('$logradouro','$numero','$complemento','$bairro','$cidade','$cep','$estado','$exibeIdProfissional[0]')");
     }
-/* }           
-                            / RETORNA SUCCESS SE TODOS OS DADOS FORAM INSERIDOS NO BANCO OU ERROR SE NÃO FOREM
-                            if($insertProfissional) {					 		
-                                echo 'success';
-                            } else {
-                                 echo 'error';
-                            }
-                        */
+    header("location:../frond-end/telaLogin.html");
 
-echo "$username <br>";
-echo "$password <br>";
-echo "$email <br>";
-//echo "$exibeIdProfissional";
+?>
 
-// DADOS PARA TABELA dadosProfissional
-echo "$nome <br>";
-echo "$sobrenome <br>";
-echo "$dataNasc <br>";
-echo "$cpf <br>";
-echo "$cnpj <br>";
-echo "$rg <br>";
-echo "$ufEmissoraRG <br>";
-echo "$dataExpedicaoRG <br>";
-echo "$celular <br>";
-echo "$telefone <br>";
-echo "$areaAtuacao <br>";
-echo "$tempoAtuacao <br>";
-echo "$possuiCertificado <br>";
-
-// DADOS PARA TABELA enderecoCadastro
-echo "$logradouro <br>";
-echo "$numero <br>";
-echo "$complemento <br>";
-echo "$bairro <br>";
-echo "$cidade <br>";
-echo "$estado <br>";
-echo "$cep <br>";
-//echo "$exibeIdProfissional";

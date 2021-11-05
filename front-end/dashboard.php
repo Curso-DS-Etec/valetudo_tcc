@@ -106,7 +106,12 @@
                     </div>
 
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logado como: <?php echo ".$_REQUEST['id']."; ?> </div>
+                    <div class="small">Logado como:
+                            <?php
+                            $usuario = $_REQUEST['id'];
+                            echo $usuario;
+                            ?>
+                          </div>
                     </div>
                 </nav>
             </div>

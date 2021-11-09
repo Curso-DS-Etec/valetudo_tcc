@@ -2,12 +2,74 @@
 <head>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap Contact Form</title>
+<title>Formulário de contato</title>
 <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<style>
+	body{
+    background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+}
+.contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+</style>
 </head>
+
 <body class="bg-light">
-    <!-- HEADER E MENU DE NAVEGAÇÃO -->
+
+	<!-- HEADER E MENU DE NAVEGAÇÃO -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
@@ -33,94 +95,39 @@
     </nav>
     <!-- FIM DO HEADER E MENU DE NAVEGAÇÃO-->
 
-
-
-	<div class="container">
-		<div class="row py-4">
-			<div class="col-5">
-				<h2>FALE CONOSCO</h2>
-				<img src="assets/faleconosco.png" alt="Fale Conosco" >
-			</div>
-		</div>
-
-		<form name="frmContact" id="frmContact" method="post" action=""
-			enctype="multipart/form-data" novalidate>
-			<div class="row">
-				<div class="form-group col-md-4">
-					<label>Nome</label> <span id="userName-info"
-						class="invalid-feedback"></span>
-					<div class="input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><?php require __DIR__ . '/vendor/bootstrap/bootstrap-icons/person.svg';?></span>
+	<!--INICIO FORMLÁRIO-->
+	<div class="container contact-form">
+				<div class="contact-image">
+					<img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+				</div>
+				<form method="post">
+					<h3>Fale Conosco</h3>
+				   <div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" name="txtName" class="form-control" placeholder="Seu Nome *" value="" />
+							</div>
+							<div class="form-group">
+								<input type="text" name="txtEmail" class="form-control" placeholder="Seu Email *" value="" />
+							</div>
+							<div class="form-group">
+								<input type="text" name="txtPhone" class="form-control" placeholder="Seu número de telefone*" value="" />
+							</div>
+							<div class="form-group">
+								<input type="submit" name="btnSubmit" class="btnContact" value="Enviar mensagem" />
+							</div>
 						</div>
-						<input type="text" class="form-control" name="userName"
-							id="userName" required>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-md-4">
-					<label>Email</label> <span id="userEmail-info"
-						class="invalid-feedback"></span>
-					<div class="input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><?php require __DIR__ . '/vendor/bootstrap/bootstrap-icons/envelope.svg';?></span>
-						</div>
-						<input type="email" name="userEmail" id="userEmail"
-							class="form-control" required>
-					</div>
-					<small id="emailHelp" class="form-text text-muted">Seu email não será compartilhado.</small>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-md-8">
-					<label>Assunto</label> <span id="subject-info"
-						class="invalid-feedback"></span>
-					<div class="input-group">
-
-						<div class="input-group-prepend">
-							<span class="input-group-text"><?php require __DIR__ . '/vendor/bootstrap/bootstrap-icons/question.svg';?></span>
-						</div>
-						<input type="text" name="subject" id="subject"
-							class="form-control" required>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-md-8">
-					<label>Mensagem</label> <span id="content-info"
-						class=" invalid-feedback"></span>
-					<div class="input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><?php require __DIR__ . '/vendor/bootstrap/bootstrap-icons/pencil.svg';?></span>
-						</div>
-						<textarea class="form-control" rows="5" name="message"
-							id="message" required></textarea>
-					</div>
-				</div>
-			</div>
-			<hr class="my-4">
-			<div class="row">
-				<div class="col">
-					<input type="submit" name="send" class="btn btn-primary"
-						value="Enviar mensagem" />
-				</div>
-			</div>
-	<?php
-	if (! empty($displayMessage)) {
-		?>
-				<div class="row">
-					<div class="col-md-8">
-						<div id="statusMessage" class="alert alert-success mt-3"
-							role="alert"><?php echo $displayMessage; ?>
+						<div class="col-md-6">
+							<div class="form-group">
+								<textarea name="txtMsg" class="form-control" placeholder="Digite sua mensagem *" style="width: 100%; height: 150px;"></textarea>
+							</div>
 						</div>
 					</div>
-				</div>
-	<?php
-	}
-	?>
-		</form>
+				</form>
 	</div>
+
+	<!--FIM FORMULÁRIO-->
+
 	<script type="text/javascript" src="./js/validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> 
